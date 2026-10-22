@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#1b222c"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .t{fill:none;stroke:#173d26;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .p{fill:none;stroke:#3fb950;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;
+         stroke-dasharray:7 93;stroke-dashoffset:100;animation:flow 3.2s linear infinite}
+      .v{fill:#0d1117;stroke:#2ea043;stroke-width:2.5}
+      .pad{fill:#2ea043}
+      .chip{fill:#11161d;stroke:#30363d;stroke-width:2;animation:pulse 3.2s ease-in-out infinite}
+      .name{font:700 46px 'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;fill:#e6edf3;letter-spacing:5px}
+      .sub{font:600 15px 'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;fill:#3fb950;letter-spacing:4px}
+      .tag{font:500 12px 'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;fill:#6e7681;letter-spacing:2px}
+      @keyframes flow{to{stroke-dashoffset:0}}
+      @keyframes pulse{0%,100%{stroke:#30363d}50%{stroke:#2ea043}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" fill="#0d1117"/>
+  <rect width="1200" height="300" fill="url(#dots)"/>
+
+  <!-- dim copper traces -->
+  <g class="t">
+    <path d="M0 60 H120 L160 110 H330"/>
+    <path d="M0 150 H330"/>
+    <path d="M0 240 H140 L180 190 H330"/>
+    <path d="M1200 60 H1080 L1040 110 H870"/>
+    <path d="M1200 150 H870"/>
+    <path d="M1200 240 H1060 L1020 190 H870"/>
+    <path d="M480 0 V40 L500 60 V80"/>
+    <path d="M600 30 V80"/>
+    <path d="M720 0 V40 L700 60 V80"/>
+    <path d="M480 300 V260 L500 240 V220"/>
+    <path d="M600 270 V220"/>
+    <path d="M720 300 V260 L700 240 V220"/>
+  </g>
+
+  <!-- signal pulses travelling into the chip -->
+  <g class="p" filter="url(#glow)">
+    <path pathLength="100" d="M0 60 H120 L160 110 H330"/>
+    <path pathLength="100" style="animation-delay:-1.1s" d="M0 150 H330"/>
+    <path pathLength="100" style="animation-delay:-2.2s" d="M0 240 H140 L180 190 H330"/>
+    <path pathLength="100" style="animation-delay:-0.6s" d="M1200 60 H1080 L1040 110 H870"/>
+    <path pathLength="100" style="animation-delay:-1.7s" d="M1200 150 H870"/>
+    <path pathLength="100" style="animation-delay:-2.8s" d="M1200 240 H1060 L1020 190 H870"/>
+    <path pathLength="100" style="animation-delay:-0.3s;animation-duration:1.6s" d="M480 0 V40 L500 60 V80"/>
+    <path pathLength="100" style="animation-delay:-0.9s;animation-duration:1.6s" d="M600 30 V80"/>
+    <path pathLength="100" style="animation-delay:-1.3s;animation-duration:1.6s" d="M720 0 V40 L700 60 V80"/>
+    <path pathLength="100" style="animation-delay:-0.5s;animation-duration:1.6s" d="M480 300 V260 L500 240 V220"/>
+    <path pathLength="100" style="animation-delay:-1.1s;animation-duration:1.6s" d="M600 270 V220"/>
+    <path pathLength="100" style="animation-delay:-0.2s;animation-duration:1.6s" d="M720 300 V260 L700 240 V220"/>
+  </g>
+
+  <!-- vias -->
+  <circle class="v" cx="600" cy="30" r="6"/>
+  <circle class="v" cx="600" cy="270" r="6"/>
+  <circle class="v" cx="120" cy="60" r="5"/>
+  <circle class="v" cx="1080" cy="60" r="5"/>
+  <circle class="v" cx="140" cy="240" r="5"/>
+  <circle class="v" cx="1060" cy="240" r="5"/>
+
+  <!-- the chip -->
+  <rect class="chip" x="330" y="80" width="540" height="140" rx="10"/>
+  <g class="pad">
+    <rect x="324" y="105" width="8" height="10" rx="2"/>
+    <rect x="324" y="145" width="8" height="10" rx="2"/>
+    <rect x="324" y="185" width="8" height="10" rx="2"/>
+    <rect x="868" y="105" width="8" height="10" rx="2"/>
+    <rect x="868" y="145" width="8" height="10" rx="2"/>
+    <rect x="868" y="185" width="8" height="10" rx="2"/>
+    <rect x="495" y="74" width="10" height="8" rx="2"/>
+    <rect x="595" y="74" width="10" height="8" rx="2"/>
+    <rect x="695" y="74" width="10" height="8" rx="2"/>
+    <rect x="495" y="218" width="10" height="8" rx="2"/>
+    <rect x="595" y="218" width="10" height="8" rx="2"/>
+    <rect x="695" y="218" width="10" height="8" rx="2"/>
+  </g>
+  <circle cx="352" cy="102" r="5" fill="#2ea043"/>
+
+  <text class="tag" x="850" y="104" text-anchor="end">huzaifa-2123</text>
+  <text class="name" x="600" y="160" text-anchor="middle" textLength="470" lengthAdjust="spacingAndGlyphs">HUZAIFA HANIF</text>
+  <text class="sub" x="600" y="196" text-anchor="middle">EMBEDDED · FPGA · ROBOTICS</text>
+</svg>
