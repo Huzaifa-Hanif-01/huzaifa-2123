@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/email-0d1117?style=for-the-badge&logo=gmail&logoColor=3fb950" /></a>
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/linkedin-0d1117?style=for-the-badge&logo=linkedin&logoColor=3fb950" /></a>
+  <a href="mailto:huzaifahanif.k@gmail.com"><img src="https://img.shields.io/badge/email-0d1117?style=for-the-badge&logo=gmail&logoColor=3fb950" /></a>
+  <a href="https://www.linkedin.com/in/huzaifa-hanif-08b512327/"><img src="https://img.shields.io/badge/linkedin-0d1117?style=for-the-badge&logo=linkedin&logoColor=3fb950" /></a>
   <img src="https://komarev.com/ghpvc/?username=huzaifa-2123&style=for-the-badge&color=3fb950&label=profile+views" />
 </p>
 
